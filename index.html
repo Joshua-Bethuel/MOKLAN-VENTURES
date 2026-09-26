@@ -4,194 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moklan Ventures | Your Trusted Technical Partner</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        navyPrimary: '#1B365D',
-                        navyDark: '#10223D',
-                        safetyOrange: '#F29100',
-                        orangeHover: '#D98200',
-                        lightBg: '#F8FAFC',
-                        cardBg: '#FFFFFF',
-                        borderGray: '#E2E8F0'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        navy: {
+                            DEFAULT: '#0f172a',
+                            dark: '#090d16',
+                            light: '#1e293b'
+                        },
+                        orange: {
+                            DEFAULT: '#ea580c',
+                            dark: '#c2410c',
+                            light: '#fb923c'
+                        }
                     }
                 }
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F8FAFC;
-            color: #1E293B;
-        }
-        .orange-glow {
-            box-shadow: 0 0 30px rgba(242, 145, 0, 0.2);
-        }
-    </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-safetyOrange selection:text-white">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-orange selection:text-white">
 
-    <!-- Header / Navigation Bar -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-borderGray shadow-sm">
+    <!-- Top Bar -->
+    <div class="bg-navy text-slate-200 text-xs sm:text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-location-dot text-orange mr-1.5"></i> Eldoret, Kenya</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-clock text-orange mr-1.5"></i> Mon - Sat: 8:00 AM - 6:00 PM</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:0728500003" class="hover:text-orange transition"><i class="fa-solid fa-phone text-orange mr-1.5"></i> 0728 500 003</a>
+                <a href="https://wa.me/254728500003" target="_blank" class="hover:text-green-400 transition"><i class="fa-brands fa-whatsapp text-green-400 mr-1.5"></i> WhatsApp Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-navyPrimary flex items-center justify-center shadow-md">
-                    <i class="fa-solid fa-bolt text-safetyOrange text-xl"></i>
+            <a href="#" class="flex items-center gap-3">
+                <div class="bg-orange/10 p-2.5 rounded-xl border border-orange/30">
+                    <i class="fa-solid fa-bolt text-orange text-2xl"></i>
                 </div>
-                <div class="flex flex-col">
-                    <span class="text-lg font-extrabold tracking-tight text-navyPrimary leading-none">
-                        MOKLAN <span class="text-safetyOrange">VENTURES</span>
-                    </span>
-                    <span class="text-[10px] tracking-widest text-slate-500 uppercase mt-0.5">Your Trusted Technical Partner</span>
+                <div>
+                    <span class="text-xl sm:text-2xl font-black tracking-wider text-navy">MOKLAN <span class="text-orange">VENTURES</span></span>
+                    <span class="block text-[10px] tracking-widest text-slate-500 uppercase font-semibold">Your Trusted Technical Partner</span>
                 </div>
-            </div>
+            </a>
             
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
-                <a href="#home" class="hover:text-safetyOrange transition-colors">Home</a>
-                <a href="#services" class="hover:text-safetyOrange transition-colors">Services</a>
-                <a href="#about" class="hover:text-safetyOrange transition-colors">About Us</a>
-                <a href="#portfolio" class="hover:text-safetyOrange transition-colors">Portfolio</a>
-                <a href="#contact" class="hover:text-safetyOrange transition-colors">Contact</a>
-            </nav>
+            <div class="hidden lg:flex items-center gap-8 font-medium text-slate-700">
+                <a href="#home" class="hover:text-orange transition">Home</a>
+                <a href="#services" class="hover:text-orange transition">Services</a>
+                <a href="#about" class="hover:text-orange transition">About CEO</a>
+                <a href="#portfolio" class="hover:text-orange transition">Our Work</a>
+                <a href="#estimator" class="hover:text-orange transition">Get Quote</a>
+                <a href="#contact" class="hover:text-orange transition">Contact</a>
+            </div>
 
-            <div class="hidden lg:flex items-center space-x-4">
-                <a href="https://wa.me/254728500003" target="_blank" class="flex items-center space-x-2 text-sm font-bold text-navyPrimary hover:text-safetyOrange">
-                    <div class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center border border-emerald-200">
-                        <i class="fa-brands fa-whatsapp text-sm"></i>
-                    </div>
-                    <span>0728 500 003</span>
-                </a>
-                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-safetyOrange text-white font-bold text-sm shadow-md hover:bg-orangeHover transition-all">
-                    Get a Quote
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="https://wa.me/254728500003" target="_blank" class="bg-orange hover:bg-orange-dark text-white px-5 py-2.5 rounded-xl font-bold shadow-lg shadow-orange/20 transition flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Hire Expert
                 </a>
             </div>
 
-            <button id="mobile-menu-btn" class="md:hidden text-navyPrimary hover:text-safetyOrange focus:outline-none">
-                <i class="fa-solid fa-bars text-2xl"></i>
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-700 hover:text-navy text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
             </button>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-borderGray px-6 py-6 space-y-4">
-            <a href="#home" class="block text-slate-700 hover:text-safetyOrange font-medium">Home</a>
-            <a href="#services" class="block text-slate-700 hover:text-safetyOrange font-medium">Services</a>
-            <a href="#about" class="block text-slate-700 hover:text-safetyOrange font-medium">About Us</a>
-            <a href="#portfolio" class="block text-slate-700 hover:text-safetyOrange font-medium">Portfolio</a>
-            <a href="#contact" class="block text-slate-700 hover:text-safetyOrange font-medium">Contact</a>
-            <div class="pt-4 border-t border-slate-100 flex flex-col space-y-3">
-                <a href="https://wa.me/254728500003" class="text-sm font-bold text-emerald-600 flex items-center space-x-2">
-                    <i class="fa-brands fa-whatsapp text-lg"></i>
-                    <span>0728 500 003 (WhatsApp)</span>
-                </a>
-                <a href="#contact" class="w-full py-3 rounded-xl bg-safetyOrange text-white font-bold text-center text-sm shadow-md">
-                    Get a Quote
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-slate-700 hover:text-orange transition">Home</a>
+            <a href="#services" class="block py-2 text-slate-700 hover:text-orange transition">Services</a>
+            <a href="#about" class="block py-2 text-slate-700 hover:text-orange transition">About CEO</a>
+            <a href="#portfolio" class="block py-2 text-slate-700 hover:text-orange transition">Our Work</a>
+            <a href="#estimator" class="block py-2 text-slate-700 hover:text-orange transition">Get Quote</a>
+            <a href="#contact" class="block py-2 text-slate-700 hover:text-orange transition">Contact</a>
+            <div class="pt-2">
+                <a href="https://wa.me/254728500003" target="_blank" class="block text-center bg-orange text-white py-3 rounded-xl font-bold">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Chat on WhatsApp
                 </a>
             </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative pt-32 pb-20 md:pt-44 md:pb-32 bg-gradient-to-b from-slate-100 to-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-xs font-bold text-safetyOrange uppercase tracking-wider">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <span>Eldoret's Premier Technical Experts</span>
-                    </div>
-                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-navyPrimary leading-tight">
-                        Your Trusted <br>
-                        <span class="text-safetyOrange">Technical Partner</span>
-                    </h1>
-                    <p class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0">
-                        Moklan Ventures delivers professional electrical installations, CCTV maintenance, solar energy solutions, alarm systems, intercoms, and secure door access control in Eldoret and across Kenya.
-                    </p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 pt-2">
-                        <a href="https://wa.me/254728500003" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-emerald-600 text-white font-bold text-base shadow-lg shadow-emerald-600/20 hover:bg-emerald-700 transition-all text-center flex items-center justify-center space-x-2">
-                            <i class="fa-brands fa-whatsapp text-xl"></i>
-                            <span>Chat on WhatsApp (0728 500 003)</span>
-                        </a>
-                        <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-navyPrimary text-white font-bold text-base shadow-lg hover:bg-navyDark transition-colors text-center">
-                            Explore Our Services
-                        </a>
-                    </div>
-
-                    <div class="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200 text-left">
-                        <div>
-                            <div class="text-2xl sm:text-3xl font-extrabold text-navyPrimary">Eldoret</div>
-                            <div class="text-xs sm:text-sm text-slate-500">Based & Ready</div>
-                        </div>
-                        <div>
-                            <div class="text-2xl sm:text-3xl font-extrabold text-navyPrimary">100%</div>
-                            <div class="text-xs sm:text-sm text-slate-500">Quality Guaranteed</div>
-                        </div>
-                        <div>
-                            <div class="text-2xl sm:text-3xl font-extrabold text-navyPrimary">24/7</div>
-                            <div class="text-xs sm:text-sm text-slate-500">Support & Response</div>
-                        </div>
-                    </div>
+    <section id="home" class="relative min-h-[90vh] flex items-center bg-slate-100 overflow-hidden py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 bg-orange/10 border border-orange/30 text-orange-dark px-4 py-1.5 rounded-full text-sm font-semibold">
+                    <i class="fa-solid fa-shield-halved"></i> Eldoret's Premier Technical Experts
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight text-navy">
+                    Professional <span class="text-orange">Electrical</span> & Security Solutions
+                </h1>
+                <p class="text-lg text-slate-600 max-w-xl leading-relaxed">
+                    Moklan Ventures delivers elite electrical installation, solar setups, advanced CCTV surveillance, intercoms, and access control systems for residential and commercial spaces.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#estimator" class="bg-orange hover:bg-orange-dark text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-orange/20 transition flex items-center gap-3">
+                        Calculate Estimate <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="https://wa.me/254728500003" target="_blank" class="bg-white hover:bg-slate-50 text-navy border border-slate-300 px-8 py-4 rounded-xl font-bold transition flex items-center gap-3 shadow-sm">
+                        <i class="fa-brands fa-whatsapp text-green-600 text-xl"></i> 0728 500 003
+                    </a>
                 </div>
 
-                <div class="lg:col-span-5 relative flex justify-center">
-                    <div class="relative w-full max-w-md rounded-3xl p-2 bg-gradient-to-b from-navyPrimary to-safetyOrange shadow-2xl">
-                        <div class="bg-white rounded-[22px] p-6 sm:p-8 space-y-6">
-                            <div class="flex items-center justify-between border-b border-slate-100 pb-4">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                                </div>
-                                <span class="text-xs font-mono font-bold text-navyPrimary">MOKLAN VENTURES</span>
-                            </div>
+                <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-200">
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-black text-orange">100%</div>
+                        <div class="text-xs sm:text-sm text-slate-500">Quality Assured</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-black text-navy">Fast</div>
+                        <div class="text-xs sm:text-sm text-slate-500">Response Time</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-black text-orange">Expert</div>
+                        <div class="text-xs sm:text-sm text-slate-500">Certified Team</div>
+                    </div>
+                </div>
+            </div>
 
-                            <div class="space-y-3">
-                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center space-x-3">
-                                    <div class="w-10 h-10 rounded-lg bg-orange-100 text-safetyOrange flex items-center justify-center font-bold">
-                                        <i class="fa-solid fa-bolt"></i>
-                                    </div>
-                                    <div>
-                                        <div class="text-sm font-bold text-navyPrimary">Electrical & Solar</div>
-                                        <div class="text-xs text-slate-500">Installation & Maintenance</div>
-                                    </div>
-                                </div>
-
-                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center space-x-3">
-                                    <div class="w-10 h-10 rounded-lg bg-blue-100 text-navyPrimary flex items-center justify-center font-bold">
-                                        <i class="fa-solid fa-video"></i>
-                                    </div>
-                                    <div>
-                                        <div class="text-sm font-bold text-navyPrimary">CCTV & Alarms</div>
-                                        <div class="text-xs text-slate-500">Surveillance & Security Bells</div>
-                                    </div>
-                                </div>
-
-                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center space-x-3">
-                                    <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
-                                        <i class="fa-solid fa-id-card-clip"></i>
-                                    </div>
-                                    <div>
-                                        <div class="text-sm font-bold text-navyPrimary">Access & Intercoms</div>
-                                        <div class="text-xs text-slate-500">Door Access Control Systems</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="pt-2 text-center">
-                                <a href="https://facebook.com" target="_blank" class="text-xs font-bold text-navyPrimary hover:text-safetyOrange flex items-center justify-center space-x-1">
-                                    <i class="fa-brands fa-facebook text-blue-600 text-base"></i>
-                                    <span>Follow Moklan Ventures on Facebook</span>
-                                </a>
-                            </div>
+            <!-- CEO Hero Card with mkln1_2.jpg -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-full max-w-md bg-white border border-slate-200 rounded-3xl p-4 shadow-xl overflow-hidden group">
+                    <div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-200">
+                        <img src="mkln1_2.jpg" alt="Moklan Ventures Lead Technical Expert" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent flex flex-col justify-end p-6">
+                            <span class="text-orange font-bold text-sm tracking-wider uppercase">Founder & Lead Expert</span>
+                            <h3 class="text-2xl font-extrabold text-white">Moklan Ventures Team</h3>
+                            <p class="text-slate-200 text-xs mt-1">Ready to handle your technical installations with absolute precision.</p>
                         </div>
                     </div>
                 </div>
@@ -200,171 +147,114 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-24 bg-white border-y border-borderGray">
+    <section id="services" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-safetyOrange">What We Do</h2>
-                <h3 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navyPrimary">Our Professional Services</h3>
-                <p class="text-slate-600 text-base">Expert technical solutions delivered with precision, safety, and reliability in Eldoret.</p>
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-orange font-bold tracking-wider uppercase text-sm mb-2">What We Do</h2>
+                <h3 class="text-3xl sm:text-4xl font-black text-navy">Our Professional Services</h3>
+                <p class="text-slate-600 mt-3">Comprehensive electrical, security, and power backup solutions tailored for your peace of mind.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:border-safetyOrange transition-all group shadow-sm hover:shadow-md">
-                    <div class="w-14 h-14 rounded-2xl bg-orange-100 border border-orange-200 flex items-center justify-center text-safetyOrange mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-bolt text-2xl"></i>
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 hover:border-orange/50 transition shadow-sm group">
+                    <div class="bg-orange/10 w-16 h-16 rounded-xl flex items-center justify-center text-orange text-2xl mb-6 group-hover:bg-orange group-hover:text-white transition">
+                        <i class="fa-solid fa-lightbulb"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-navyPrimary mb-3">Electrical Installation & Maintenance</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                        Complete wiring, distribution board servicing, lighting setup, and preventative electrical maintenance for residential and commercial premises.
-                    </p>
-                    <a href="#contact" class="text-sm font-bold text-safetyOrange hover:underline flex items-center space-x-1">
-                        <span>Book Service</span>
-                        <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
+                    <h4 class="text-xl font-bold text-navy mb-3">Electrical Installation & Maintenance</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Full wiring, distribution board assembly, lighting, and prompt electrical maintenance for homes and commercial buildings.</p>
                 </div>
 
-                <!-- Service 2 -->
-                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:border-safetyOrange transition-all group shadow-sm hover:shadow-md">
-                    <div class="w-14 h-14 rounded-2xl bg-blue-100 border border-blue-200 flex items-center justify-center text-navyPrimary mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-video text-2xl"></i>
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 hover:border-orange/50 transition shadow-sm group">
+                    <div class="bg-orange/10 w-16 h-16 rounded-xl flex items-center justify-center text-orange text-2xl mb-6 group-hover:bg-orange group-hover:text-white transition">
+                        <i class="fa-solid fa-video"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-navyPrimary mb-3">CCTV Installation & Maintenance</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                        High-definition IP camera setups, remote mobile monitoring configurations, camera maintenance, and complete site security coverage.
-                    </p>
-                    <a href="#contact" class="text-sm font-bold text-navyPrimary hover:underline flex items-center space-x-1">
-                        <span>Book Service</span>
-                        <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
+                    <h4 class="text-xl font-bold text-navy mb-3">CCTV Installation & Maintenance</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">High-definition surveillance camera setup, DVR/NVR configuration, and remote viewing on your mobile devices.</p>
                 </div>
 
-                <!-- Service 3 -->
-                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:border-safetyOrange transition-all group shadow-sm hover:shadow-md">
-                    <div class="w-14 h-14 rounded-2xl bg-amber-100 border border-amber-200 flex items-center justify-center text-amber-600 mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-solar-panel text-2xl"></i>
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 hover:border-orange/50 transition shadow-sm group">
+                    <div class="bg-orange/10 w-16 h-16 rounded-xl flex items-center justify-center text-orange text-2xl mb-6 group-hover:bg-orange group-hover:text-white transition">
+                        <i class="fa-solid fa-solar-panel"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-navyPrimary mb-3">Solar Installation</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                        Reliable solar PV rooftop installations, inverter configurations, and battery storage solutions to eliminate power blackouts and reduce electricity bills.
-                    </p>
-                    <a href="#contact" class="text-sm font-bold text-amber-600 hover:underline flex items-center space-x-1">
-                        <span>Book Service</span>
-                        <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
+                    <h4 class="text-xl font-bold text-navy mb-3">Solar Installation</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Inverter systems, solar panels, and battery storage configurations for uninterrupted clean power supply.</p>
                 </div>
 
-                <!-- Service 4 -->
-                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:border-safetyOrange transition-all group shadow-sm hover:shadow-md">
-                    <div class="w-14 h-14 rounded-2xl bg-purple-100 border border-purple-200 flex items-center justify-center text-purple-600 mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-bell text-2xl"></i>
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 hover:border-orange/50 transition shadow-sm group">
+                    <div class="bg-orange/10 w-16 h-16 rounded-xl flex items-center justify-center text-orange text-2xl mb-6 group-hover:bg-orange group-hover:text-white transition">
+                        <i class="fa-solid fa-bell"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-navyPrimary mb-3">Bells & Alarms</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                        Professional installation and repair of security alarms, alert sirens, and warning bells for schools, residential compounds, and business facilities.
-                    </p>
-                    <a href="#contact" class="text-sm font-bold text-purple-600 hover:underline flex items-center space-x-1">
-                        <span>Book Service</span>
-                        <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
+                    <h4 class="text-xl font-bold text-navy mb-3">Bells & Alarms</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Reliable security alarm systems and automated electric bells for compounds, schools, and offices.</p>
                 </div>
 
-                <!-- Service 5 -->
-                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:border-safetyOrange transition-all group shadow-sm hover:shadow-md">
-                    <div class="w-14 h-14 rounded-2xl bg-emerald-100 border border-emerald-200 flex items-center justify-center text-emerald-600 mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-comments text-2xl"></i>
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 hover:border-orange/50 transition shadow-sm group">
+                    <div class="bg-orange/10 w-16 h-16 rounded-xl flex items-center justify-center text-orange text-2xl mb-6 group-hover:bg-orange group-hover:text-white transition">
+                        <i class="fa-solid fa-comments"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-navyPrimary mb-3">Intercoms</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                        Audio and video intercom systems for apartment blocks, gated communities, and corporate offices ensuring secure visitor communication.
-                    </p>
-                    <a href="#contact" class="text-sm font-bold text-emerald-600 hover:underline flex items-center space-x-1">
-                        <span>Book Service</span>
-                        <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
+                    <h4 class="text-xl font-bold text-navy mb-3">Intercoms</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Crystal-clear audio and video intercom setups for secure visitor communication in apartments and gates.</p>
                 </div>
 
-                <!-- Service 6 -->
-                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:border-safetyOrange transition-all group shadow-sm hover:shadow-md">
-                    <div class="w-14 h-14 rounded-2xl bg-cyan-100 border border-cyan-200 flex items-center justify-center text-cyan-600 mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-door-closed text-2xl"></i>
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 hover:border-orange/50 transition shadow-sm group">
+                    <div class="bg-orange/10 w-16 h-16 rounded-xl flex items-center justify-center text-orange text-2xl mb-6 group-hover:bg-orange group-hover:text-white transition">
+                        <i class="fa-solid fa-door-closed"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-navyPrimary mb-3">Door Access Systems</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                        Electronic magnetic locks, biometric fingerprint scanners, and card-access mechanisms to safeguard your restricted zones.
-                    </p>
-                    <a href="#contact" class="text-sm font-bold text-cyan-600 hover:underline flex items-center space-x-1">
-                        <span>Book Service</span>
-                        <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
+                    <h4 class="text-xl font-bold text-navy mb-3">Door Access Systems</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Biometric readers, electronic magnetic locks, and secure keypad entry systems to protect your premises.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-slate-50">
+    <!-- About CEO Section -->
+    <section id="about" class="py-24 bg-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-6 space-y-6">
-                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-xs font-bold text-safetyOrange uppercase tracking-wider">
-                        <span>About Moklan Ventures</span>
+                <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <img src="mkln5.jpg" alt="Moklan Ventures Technician at Work" class="rounded-2xl object-cover w-full h-64 border border-slate-300 shadow-md">
+                        <img src="mkln1.jpg" alt="Solar Inverter Setup" class="rounded-2xl object-cover w-full h-48 border border-slate-300 shadow-md">
                     </div>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navyPrimary">
-                        Your Trusted Technical Partner in Eldoret.
-                    </h2>
-                    <p class="text-slate-600 text-base leading-relaxed">
-                        Moklan Ventures is a premier technical services company based in Eldoret, Kenya. We specialize in comprehensive electrical engineering, security surveillance setup, solar installations, and advanced access control systems.
-                    </p>
-                    <p class="text-slate-600 text-base leading-relaxed">
-                        With a commitment to safety, prompt turnaround times, and professional workmanship, we cater to residential homes, commercial enterprises, schools, and industrial clients across the region.
-                    </p>
-                    <div class="grid grid-cols-2 gap-6 pt-2">
-                        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                            <div class="text-navyPrimary font-extrabold text-2xl mb-1">Eldoret Based</div>
-                            <div class="text-xs text-slate-500">Prompt local dispatch and on-site support.</div>
-                        </div>
-                        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                            <div class="text-safetyOrange font-extrabold text-2xl mb-1">Expert Team</div>
-                            <div class="text-xs text-slate-500">Certified technicians with years of hands-on experience.</div>
-                        </div>
+                    <div class="space-y-4 pt-8">
+                        <img src="mkln4.jpg" alt="Team Moklan Ventures" class="rounded-2xl object-cover w-full h-48 border border-slate-300 shadow-md">
+                        <img src="mkln8.jpg" alt="Field Tools and Gear" class="rounded-2xl object-cover w-full h-64 border border-slate-300 shadow-md">
                     </div>
                 </div>
 
-                <div class="lg:col-span-6 relative">
-                    <div class="bg-navyPrimary rounded-3xl p-8 sm:p-10 text-white shadow-xl relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-48 h-48 bg-safetyOrange/20 blur-3xl rounded-full pointer-events-none"></div>
-                        <h3 class="text-2xl font-bold mb-6 text-safetyOrange">Quick Contact Details</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-safetyOrange shrink-0">
-                                    <i class="fa-brands fa-whatsapp text-2xl"></i>
-                                </div>
-                                <div>
-                                    <div class="text-xs text-slate-300 uppercase font-semibold">Phone & WhatsApp</div>
-                                    <a href="https://wa.me/254728500003" target="_blank" class="text-lg font-bold text-white hover:text-safetyOrange">0728 500 003</a>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-safetyOrange shrink-0">
-                                    <i class="fa-brands fa-facebook text-2xl"></i>
-                                </div>
-                                <div>
-                                    <div class="text-xs text-slate-300 uppercase font-semibold">Facebook Page</div>
-                                    <span class="text-lg font-bold text-white">Moklan Ventures</span>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-safetyOrange shrink-0">
-                                    <i class="fa-solid fa-location-dot text-2xl"></i>
-                                </div>
-                                <div>
-                                    <div class="text-xs text-slate-300 uppercase font-semibold">Location</div>
-                                    <span class="text-lg font-bold text-white">Eldoret, Kenya</span>
-                                </div>
-                            </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-orange/10 border border-orange/30 text-orange-dark px-4 py-1.5 rounded-full text-sm font-semibold">
+                        <i class="fa-solid fa-user-tie"></i> Meet Our Leadership
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-black text-navy">Dedicated Expertise & Hands-On Technical Precision</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        At <strong class="text-navy">Moklan Ventures</strong>, we take pride in delivering top-tier technical solutions across Eldoret and surrounding regions. Led by experienced technical professionals, our team is equipped with state-of-the-art tools and real-world expertise to execute every project safely and efficiently.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="bg-white border border-slate-200 p-4 rounded-xl flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-check-circle text-orange text-xl"></i>
+                            <span class="font-semibold text-navy text-sm">Certified Electrical Work</span>
+                        </div>
+                        <div class="bg-white border border-slate-200 p-4 rounded-xl flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-check-circle text-orange text-xl"></i>
+                            <span class="font-semibold text-navy text-sm">Professional Security Setup</span>
+                        </div>
+                        <div class="bg-white border border-slate-200 p-4 rounded-xl flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-check-circle text-orange text-xl"></i>
+                            <span class="font-semibold text-navy text-sm">Solar Power Integration</span>
+                        </div>
+                        <div class="bg-white border border-slate-200 p-4 rounded-xl flex items-center gap-3 shadow-sm">
+                            <i class="fa-solid fa-check-circle text-orange text-xl"></i>
+                            <span class="font-semibold text-navy text-sm">Reliable Customer Support</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 flex items-center gap-6">
+                        <a href="https://wa.me/254728500003" target="_blank" class="bg-orange hover:bg-orange-dark text-white px-6 py-3 rounded-xl font-bold shadow-lg shadow-orange/20 transition">
+                            <i class="fa-brands fa-whatsapp mr-2"></i> Contact Director
+                        </a>
+                        <div class="text-slate-600 text-sm">
+                            <span class="block text-navy font-bold">Call / WhatsApp</span>
+                            <span>0728 500 003</span>
                         </div>
                     </div>
                 </div>
@@ -372,201 +262,257 @@
         </div>
     </section>
 
-    <!-- Portfolio / Featured Work -->
-    <section id="portfolio" class="py-24 bg-white border-y border-borderGray">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-safetyOrange">Our Portfolio</h2>
-                <h3 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navyPrimary">Recent Technical Projects</h3>
-                <p class="text-slate-600 text-base">A snapshot of our completed electrical, CCTV, solar, and access control installations.</p>
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-orange font-bold tracking-wider uppercase text-sm mb-2">Our Portfolio</h2>
+                <h3 class="text-3xl sm:text-4xl font-black text-navy">Recent Projects & Field Work</h3>
+                <p class="text-slate-600 mt-3">A visual showcase of our professional installations, solar setups, CCTV equipment, and wiring projects.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden group shadow-sm">
-                    <div class="relative h-60 overflow-hidden bg-slate-200">
-                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&h=400&fit=crop" alt="Commercial Electrical" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/1B365D/ffffff?text=Electrical+Installation'">
-                        <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navyPrimary/90 backdrop-blur-md text-xs font-bold text-safetyOrange">
-                            Electrical Wiring
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 aspect-video shadow-sm">
+                    <img src="mkln1.jpg" alt="Solar Inverter Wiring" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-orange text-xs font-bold uppercase tracking-wider">Solar System</span>
+                            <h4 class="text-white font-bold text-lg">Inverter & Power Backup Setup</h4>
                         </div>
-                    </div>
-                    <div class="p-6 space-y-2">
-                        <h4 class="text-lg font-bold text-navyPrimary">Eldoret Commercial Complex Wiring</h4>
-                        <p class="text-slate-600 text-xs leading-relaxed">Complete distribution board installation, lighting setup, and safety testing for a commercial building in Eldoret.</p>
-                        <div class="pt-2 text-xs font-semibold text-safetyOrange">Location: Eldoret</div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden group shadow-sm">
-                    <div class="relative h-60 overflow-hidden bg-slate-200">
-                        <img src="https://images.unsplash.com/photo-1509391365360-b4859a764d85?w=600&h=400&fit=crop" alt="Solar Installation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/1B365D/ffffff?text=Solar+Installation'">
-                        <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navyPrimary/90 backdrop-blur-md text-xs font-bold text-safetyOrange">
-                            Solar PV
+                <div class="relative group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 aspect-video shadow-sm">
+                    <img src="mkln2.jpg" alt="Inverter and AVS Installation" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-orange text-xs font-bold uppercase tracking-wider">Electrical Protection</span>
+                            <h4 class="text-white font-bold text-lg">AVS & Circuit Protection Unit</h4>
                         </div>
-                    </div>
-                    <div class="p-6 space-y-2">
-                        <h4 class="text-lg font-bold text-navyPrimary">Residential Solar & Inverter Setup</h4>
-                        <p class="text-slate-600 text-xs leading-relaxed">Rooftop solar panel array and hybrid inverter configuration providing uninterrupted backup power.</p>
-                        <div class="pt-2 text-xs font-semibold text-safetyOrange">Location: Eldoret Environs</div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden group shadow-sm">
-                    <div class="relative h-60 overflow-hidden bg-slate-200">
-                        <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600&h=400&fit=crop" alt="CCTV Security" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/1B365D/ffffff?text=CCTV+and+Access'">
-                        <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-navyPrimary/90 backdrop-blur-md text-xs font-bold text-safetyOrange">
-                            CCTV & Access Control
+                <div class="relative group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 aspect-video shadow-sm">
+                    <img src="mkln3.jpg" alt="Distribution Board & Alarm Panel" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-orange text-xs font-bold uppercase tracking-wider">Alarms & Control</span>
+                            <h4 class="text-white font-bold text-lg">Alarm Panel & Breaker Board</h4>
                         </div>
                     </div>
-                    <div class="p-6 space-y-2">
-                        <h4 class="text-lg font-bold text-navyPrimary">Apartment Intercom & Biometric Access</h4>
-                        <p class="text-slate-600 text-xs leading-relaxed">Installation of HD CCTV cameras, biometric door access control, and tenant intercom systems.</p>
-                        <div class="pt-2 text-xs font-semibold text-safetyOrange">Location: Eldoret Town</div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 aspect-video shadow-sm">
+                    <img src="mkln6.jpg" alt="CCTV Equipment and Tools" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-orange text-xs font-bold uppercase tracking-wider">Security Hardware</span>
+                            <h4 class="text-white font-bold text-lg">CCTV Cameras & Power Supplies</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 aspect-video shadow-sm">
+                    <img src="mkln7.jpg" alt="Hikvision DVR & Cameras" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-orange text-xs font-bold uppercase tracking-wider">Surveillance</span>
+                            <h4 class="text-white font-bold text-lg">Hikvision Turbo HD DVR Systems</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 aspect-video shadow-sm">
+                    <img src="mkln9.jpg" alt="Professional Tool Box and Gear" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <div>
+                            <span class="text-orange text-xs font-bold uppercase tracking-wider">Professional Gear</span>
+                            <h4 class="text-white font-bold text-lg">Equipped for Any Technical Job</h4>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact / Quote Section -->
-    <section id="contact" class="py-24 bg-slate-50">
+    <!-- Cost Estimator Section -->
+    <section id="estimator" class="py-24 bg-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-xl">
+                <div class="text-center mb-10">
+                    <span class="text-orange font-bold uppercase text-xs tracking-wider">Instant Quote Calculator</span>
+                    <h3 class="text-3xl font-black text-navy mt-1">Estimate Your Project Cost</h3>
+                    <p class="text-slate-600 text-sm mt-2">Select your service type and scale to get an estimated quote range instantly.</p>
+                </div>
+
+                <form id="quote-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Select Service</label>
+                            <select id="calc-service" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-orange">
+                                <option value="electrical">Electrical Installation & Wiring</option>
+                                <option value="cctv">CCTV Installation</option>
+                                <option value="solar">Solar Power Installation</option>
+                                <option value="alarm">Bells & Alarms Setup</option>
+                                <option value="intercom">Intercom System</option>
+                                <option value="access">Door Access Control</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Scale / Scope</label>
+                            <select id="calc-scale" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-orange">
+                                <option value="small">Small (Single Room / Office / Home)</option>
+                                <option value="medium">Medium (Standard House / 4-Cam System)</option>
+                                <option value="large">Large (Commercial Building / Large Estate)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-center space-y-2">
+                        <span class="text-slate-500 text-sm">Estimated Cost Range (KES)</span>
+                        <div id="calc-result" class="text-3xl sm:text-4xl font-black text-orange">KES 10,000 - KES 25,000</div>
+                        <p class="text-xs text-slate-400">* Final quotation may vary based on specific site inspection and materials required.</p>
+                    </div>
+
+                    <div class="text-center">
+                        <a id="whatsapp-quote-btn" href="https://wa.me/254728500003?text=Hello%20Moklan%20Ventures,%20I%20used%20your%20website%20estimator%20and%20would%20like%20to%20book%20a%20service." target="_blank" class="inline-flex items-center justify-center gap-3 bg-orange hover:bg-orange-dark text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-orange/20 transition w-full sm:w-auto">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Request This Quote via WhatsApp
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <section id="contact" class="py-24 bg-white border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 <div class="lg:col-span-5 space-y-6">
-                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-xs font-bold text-safetyOrange uppercase tracking-wider">
-                        <span>Get In Touch</span>
+                    <div class="flex items-center gap-3">
+                        <div class="bg-orange/10 p-2.5 rounded-xl border border-orange/30">
+                            <i class="fa-solid fa-bolt text-orange text-2xl"></i>
+                        </div>
+                        <div>
+                            <span class="text-2xl font-black tracking-wider text-navy">MOKLAN <span class="text-orange">VENTURES</span></span>
+                            <span class="block text-[10px] tracking-widest text-slate-500 uppercase font-semibold">Your Trusted Technical Partner</span>
+                        </div>
                     </div>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-navyPrimary">Contact Moklan Ventures Today</h2>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Reach out to our technical team via WhatsApp, phone call, Facebook, or visit our Eldoret office for reliable installations and maintenance.
+                        Professional electrical engineering, CCTV security systems, solar setups, and access control solutions based in Eldoret, Kenya.
                     </p>
 
                     <div class="space-y-4 pt-2">
-                        <a href="https://wa.me/254728500003" target="_blank" class="flex items-center space-x-4 p-4 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-safetyOrange transition-all">
-                            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
-                                <i class="fa-brands fa-whatsapp text-2xl"></i>
-                            </div>
-                            <div>
-                                <div class="text-xs text-slate-500 font-semibold">WhatsApp & Phone</div>
-                                <div class="text-base font-bold text-navyPrimary">0728 500 003</div>
-                            </div>
+                        <a href="tel:0728500003" class="flex items-center gap-4 text-slate-700 hover:text-orange transition">
+                            <div class="bg-slate-100 w-10 h-10 rounded-xl flex items-center justify-center text-orange"><i class="fa-solid fa-phone"></i></div>
+                            <span>0728 500 003</span>
                         </a>
-
-                        <div class="flex items-center space-x-4 p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
-                                <i class="fa-brands fa-facebook text-2xl"></i>
-                            </div>
-                            <div>
-                                <div class="text-xs text-slate-500 font-semibold">Facebook Page</div>
-                                <div class="text-base font-bold text-navyPrimary">Moklan Ventures</div>
-                            </div>
+                        <a href="https://wa.me/254728500003" target="_blank" class="flex items-center gap-4 text-slate-700 hover:text-orange transition">
+                            <div class="bg-slate-100 w-10 h-10 rounded-xl flex items-center justify-center text-green-600"><i class="fa-brands fa-whatsapp text-xl"></i></div>
+                            <span>0728 500 003 (WhatsApp & Phone)</span>
+                        </a>
+                        <div class="flex items-center gap-4 text-slate-700">
+                            <div class="bg-slate-100 w-10 h-10 rounded-xl flex items-center justify-center text-orange"><i class="fa-solid fa-location-dot"></i></div>
+                            <span>Eldoret Location, Kenya</span>
                         </div>
-
-                        <div class="flex items-center space-x-4 p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                            <div class="w-12 h-12 rounded-xl bg-orange-100 text-safetyOrange flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-location-dot text-2xl"></i>
-                            </div>
-                            <div>
-                                <div class="text-xs text-slate-500 font-semibold">Office Location</div>
-                                <div class="text-base font-bold text-navyPrimary">Eldoret, Kenya</div>
-                            </div>
-                        </div>
+                        <a href="https://facebook.com" target="_blank" class="flex items-center gap-4 text-slate-700 hover:text-orange transition">
+                            <div class="bg-slate-100 w-10 h-10 rounded-xl flex items-center justify-center text-blue-600"><i class="fa-brands fa-facebook-f"></i></div>
+                            <span>Moklan Ventures Facebook Page</span>
+                        </a>
                     </div>
                 </div>
 
-                <div class="lg:col-span-7">
-                    <div class="bg-white border border-slate-200 rounded-3xl p-8 sm:p-10 shadow-lg">
-                        <form id="quote-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Full Name</label>
-                                    <input type="text" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-safetyOrange transition-colors text-sm">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Phone Number</label>
-                                    <input type="tel" required placeholder="0728 500 003" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-safetyOrange transition-colors text-sm">
-                                </div>
-                            </div>
-
+                <div class="lg:col-span-7 bg-slate-50 border border-slate-200 p-8 rounded-3xl shadow-sm">
+                    <h3 class="text-2xl font-bold text-navy mb-2">Send Us a Message</h3>
+                    <p class="text-slate-600 text-sm mb-6">Have an inquiry or need urgent technical assistance? Reach out directly.</p>
+                    
+                    <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been received. We will contact you shortly.');" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Service Required</label>
-                                <select class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 focus:outline-none focus:border-safetyOrange transition-colors text-sm">
-                                    <option>Electrical Installation & Maintenance</option>
-                                    <option>CCTV Installation & Maintenance</option>
-                                    <option>Solar Installation</option>
-                                    <option>Bells & Alarms</option>
-                                    <option>Intercoms</option>
-                                    <option>Door Access Systems</option>
-                                </select>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Your Name</label>
+                                <input type="text" required class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-orange text-sm" placeholder="John Doe">
                             </div>
-
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Project / Repair Details</label>
-                                <textarea rows="4" required placeholder="Describe your technical requirements or location in Eldoret..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-safetyOrange transition-colors text-sm"></textarea>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Phone Number</label>
+                                <input type="tel" required class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-orange text-sm" placeholder="0712345678">
                             </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Service Needed</label>
+                            <select class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-orange text-sm">
+                                <option>Electrical Installation & Maintenance</option>
+                                <option>CCTV Installation & Maintenance</option>
+                                <option>Solar Installation</option>
+                                <option>Bells & Alarms</option>
+                                <option>Intercoms</option>
+                                <option>Door Access Systems</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Your Message</label>
+                            <textarea rows="4" required class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-orange text-sm" placeholder="Describe what you need..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-orange hover:bg-orange-dark text-white py-4 rounded-xl font-bold shadow-lg shadow-orange/20 transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
 
-                            <button type="submit" class="w-full py-4 rounded-xl bg-safetyOrange text-white font-bold text-sm shadow-md hover:bg-orangeHover transition-all">
-                                Send Message / Request Quote
-                            </button>
-
-                            <div id="form-success" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 text-center text-sm font-semibold">
-                                Thank you! Your message has been sent successfully. We will contact you shortly.
-                            </div>
-                        </form>
-                    </div>
+            <div class="mt-16 pt-8 border-t border-slate-200 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 Moklan Ventures. All rights reserved. Eldoret, Kenya.</p>
+                <div class="flex gap-6">
+                    <a href="#home" class="hover:text-slate-700 transition">Privacy Policy</a>
+                    <a href="#home" class="hover:text-slate-700 transition">Terms of Service</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-navyPrimary text-white py-12 border-t border-navyDark">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 items-center">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 rounded-xl bg-safetyOrange flex items-center justify-center shadow-md">
-                        <i class="fa-solid fa-bolt text-white text-xl"></i>
-                    </div>
-                    <span class="text-xl font-extrabold tracking-tight">MOKLAN <span class="text-safetyOrange">VENTURES</span></span>
-                </div>
-                <div class="text-sm text-slate-300 text-center">
-                    Your Trusted Technical Partner in Eldoret, Kenya.
-                </div>
-                <div class="flex justify-center md:justify-end space-x-4">
-                    <a href="https://wa.me/254728500003" target="_blank" class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white hover:bg-safetyOrange transition-colors"><i class="fa-brands fa-whatsapp text-lg"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white hover:bg-safetyOrange transition-colors"><i class="fa-brands fa-facebook text-lg"></i></a>
-                </div>
-            </div>
-
-            <div class="pt-8 border-t border-navyDark flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400">
-                <div>&copy; 2026 Moklan Ventures. All rights reserved.</div>
-                <div class="mt-4 sm:mt-0">
-                    <span>Contact: 0728 500 003 | Eldoret Location</span>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    <!-- JavaScript -->
     <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuBtn.addEventListener('click', () => {
+
+        menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Form submission handler
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            const successMsg = document.getElementById('form-success');
-            successMsg.classList.remove('hidden');
-            document.getElementById('quote-form').reset();
-            setTimeout(() => {
-                successMsg.classList.add('hidden');
-            }, 6000);
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        const serviceSelect = document.getElementById('calc-service');
+        const scaleSelect = document.getElementById('calc-scale');
+        const resultDisplay = document.getElementById('calc-result');
+        const whatsappQuoteBtn = document.getElementById('whatsapp-quote-btn');
+
+        const pricingTable = {
+            electrical: { small: "KES 5,000 - KES 15,000", medium: "KES 20,000 - KES 50,000", large: "KES 60,000 - KES 150,000+" },
+            cctv: { small: "KES 15,000 - KES 25,000", medium: "KES 35,000 - KES 75,000", large: "KES 90,000 - KES 250,000+" },
+            solar: { small: "KES 40,000 - KES 90,000", medium: "KES 120,000 - KES 300,000", large: "KES 400,000 - KES 1,000,000+" },
+            alarm: { small: "KES 8,000 - KES 18,000", medium: "KES 25,000 - KES 50,000", large: "KES 60,000 - KES 120,000+" },
+            intercom: { small: "KES 12,000 - KES 25,000", medium: "KES 35,000 - KES 70,000", large: "KES 80,000 - KES 200,000+" },
+            access: { small: "KES 15,000 - KES 30,000", medium: "KES 40,000 - KES 90,000", large: "KES 100,000 - KES 250,000+" }
+        };
+
+        function updateEstimate() {
+            const service = serviceSelect.value;
+            const scale = scaleSelect.value;
+            const priceText = pricingTable[service][scale];
+            resultDisplay.textContent = priceText;
+
+            const serviceName = serviceSelect.options[serviceSelect.selectedIndex].text;
+            const scaleName = scaleSelect.options[scaleSelect.selectedIndex].text;
+            
+            const waMessage = encodeURIComponent(`Hello Moklan Ventures, I would like a quote for ${serviceName} (${scaleName}). Estimated range: ${priceText}. Please assist.`);
+            whatsappQuoteBtn.href = `https://wa.me/254728500003?text=${waMessage}`;
         }
+
+        serviceSelect.addEventListener('change', updateEstimate);
+        scaleSelect.addEventListener('change', updateEstimate);
     </script>
 </body>
 </html>
